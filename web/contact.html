@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<title>ContactUS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body {
+color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #3f586b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: black;
+    padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.navbar {
+    overflow: auto;
+    background-color: #3f586b;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white; 	AIzaSyC2r55qHvMyLFeLmBMhyeSSEqSe6QftoOI
+TestKey 	11 Dec 2015 	IP addresses 	AIzaSyAZicAwBFQOf1Mkect_huSboeVYFlJQqZA
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.active {
+    background-color: black;
+    color: black;
+}
+</style>
+<body style="background-color:black;">
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="events.html">Events</a>
+  <a href="news.html">News</a>
+  <a href="about.html">About</a>
+<a class="active" href="contact.html">Contact</a>
+  <a href="login.html" >Log In</a>
+</div> 
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Swing by for a cup of coffee, or leave us a feedback:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div id="map" style="width:100%;height:500px"></div>
+    </div>
+    <div class="column">
+      <form action="contact.jsp" method="post">
+        <label for="uname">Name</label>
+        <input type="text" id="uname" name="uname" placeholder="Name">
+ <br>      What do you think about our initiative of having PICT-CSI student's branch?<br> 
+ <select  name="sub" >
+    <option value="Great">Great</option>
+    <option value="Good">Good</option>
+ <option value="Bad">Bad</option>
+  </select>
+<br>
+How would you rate our Events?<br><span>
+<input type="radio" name="rate" value="0-3" checked> 0-3 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <input type="radio" name="rate" value="4-7"> 4-7 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <input type="radio" name="rate" value="7-10"> 7-10
+<br><br></span>
+        <input type="submit" value="Submit">
+<br>
+<br>
+<p>OR
+</p>
+
+<p>Drop us your true words at:</p> <a href = "https://accounts.google.com/ServiceLogin?sacu=1&scc=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&osid=1&service=mail&ss=1&ltmpl=default&rm=false#identifier">pictcsi@gmail.com</a>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+// Initialize google maps
+function myMap() {
+  var myCenter = new google.maps.LatLng(18.457438, 73.850871);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 17};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZicAwBFQOf1Mkect_huSboeVYFlJQqZA&callback=myMap"></script>
+
+</body>
+</html> 
+

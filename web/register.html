@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+background: black;
+ font-family: Arial, Helvetica, sans-serif;
+
+}
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    background-color: black;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: #3f586b;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 42%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+a {
+    color: dodgerblue;
+}
+.navbar {
+    overflow: auto;
+    background-color: #3f586b;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+.navbar a.right {
+    float: right;
+}
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.active {
+    background-color: black;
+    color: black;
+}
+input[type=text], select {
+    width: 42%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 42%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 42%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="events.html">Events</a>
+  <a href="news.html">News</a>
+  <a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+  <a href="login.html" >Log In</a>
+</div>
+<form action="signup.jsp" method="post">
+  <div class="container">
+    <h1 style="font-family:Arial; color:white"><u>Registration Form</h1></u>
+
+
+
+    <label for="uname"><b></b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+<br><br>
+    <label for="psw"><b></b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+<br>
+
+<br>    <select  name="branch" >
+    
+    <option value="I.T">I.T</option>
+ <option value="COMP">COMP</option>
+    <option value="ENTC">ENTC</option>
+    <option value="Other">Other</option>
+  </select>
+
+
+<br>
+<br>    <select  name="year" >
+    
+    <option value="FE">FE</option>
+ <option value="SE">SE</option>
+    <option value="TE">TE</option>
+    <option value="BE">BE</option>
+  </select>
+<br><br>
+ <select  name="desg" >
+    
+    <option value="User">User</option>
+ <option value="Admin">Admin</option>
+  </select>
+<br>
+    <p style="font-family:Arial; color:white" >By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn" font-size="10">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
+

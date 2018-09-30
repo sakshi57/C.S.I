@@ -1,0 +1,122 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"></head><body><hr>
+
+<style type="text/css">
+	
+p {
+    font-size: 12px;
+    color: red;
+}
+
+body {
+  background: linear-gradient(to bottom right, grey, mintcream,grey);
+}
+</style>
+
+
+<center><h1><u>FEEDBACK FORM</u></h1></center>
+<hr>
+<h2>SIGN UP</h2>
+<hr>
+
+
+<form name="myform" onsubmit="return validateform()">
+<fieldset>
+<legend><b><font color="navy">LOGIN INFORMATION:</font></b></legend> 
+
+
+  Name:<br>
+  <input name="fname" required="" placeholder="Enter your first name" type="text">
+  <p>*Enter letters only</p>
+  Email:<br>
+  <input name="email" required="" placeholder="Enter your email-id" type="text"><br>
+  <br>
+ 
+Password:<br>
+<input name="" required="" placeholder="Enter password" type="password"><br><br>
+Mobile Number:<br>
+<input name="numb" required="" placeholder="Enter your mobile number" type="Number">	
+<br><br>
+Upload Image: <br>
+<input name="file1" type="file">
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend><b><font color="navy">SPARE A MINUTE:</font></b></legend> 
+ 
+ How do you find our fitness tips?
+	<br>
+    <input value="Excellent" type="radio"> Excellent<br>
+  <input value="Good" checked="checked" type="radio"> Good<br>
+  <input value="Needs improvement" type="radio">Needs improvement<br>
+
+<br>
+
+ Interested Areas: <br>
+   <input value="Yoga" type="checkbox"> Yoga<br>
+   
+   <input value="Cardio" type="checkbox"> Cardio<br>
+   
+   <input value="Diet and Nutrition" type="checkbox">Diet and Nutrition <br>
+   
+   <br>
+
+<br><br><input name="" value="Submit" type="submit">
+
+
+
+
+<script>
+
+
+	function validateform(form)
+{ 
+	var x=document.forms["myform"]["fname"].value;
+var letters = /^[A-Za-z]+$/;
+if(letters.test(x)==false)
+{
+	alert('Enter valid name');
+return false;
+}
+
+
+ x=document.forms["myform"]["email"].value;
+
+ var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+ if (email.test(x)==false)
+  {
+    alert("You have entered an invalid email address!")
+    return (false)
+  }
+
+
+
+ x=document.forms["myform"]["numb"].value;
+ var Num=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+if(Num.test(x)==false)
+{
+	alert('Enter valid Mobile Number');
+return false;
+}
+
+
+    var file_extension = document.myform.file1.value.split('.').pop().toLowerCase(); // split function will split the filename by dot(.), and pop function will pop the last element from the array which will give you the extension as well. If there will be no extension then it will return the filename.
+
+   
+       
+if(file_extension!= "jpg" && file_extension!= "png" )
+{
+	alert("Only Image File is allowed!");
+}
+}
+
+    
+
+
+</script>
+
+
+</fieldset></form></body></html>
